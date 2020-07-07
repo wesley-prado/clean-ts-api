@@ -5,8 +5,10 @@
   "author": "Wesley Prado <wprado1424@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@shelf/jest-mongodb": "^1.1.5",
     "@types/bcrypt": "^3.0.0",
     "@types/jest": "24",
+    "@types/mongodb": "^3.5.25",
     "@types/node": "^14.0.13",
     "@types/validator": "^13.1.0",
     "@typescript-eslint/eslint-plugin": "2.33.0",
@@ -23,6 +25,11 @@
     "ts-jest": "24",
     "typescript": "^3.9.5"
   },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "mongodb": "^3.5.9",
+    "validator": "^13.1.1"
+  },
   "scripts": {
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
     "test:verbose": "jest --passWithNoTests --runInBand",
@@ -30,9 +37,5 @@
     "test:integration": "yarn test -c jest-integration-config.js",
     "test:staged": "yarn test --findRelatedTests",
     "test:ci": "yarn test --coverage"
-  },
-  "dependencies": {
-    "bcrypt": "^5.0.0",
-    "validator": "^13.1.1"
   }
 }
