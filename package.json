@@ -7,6 +7,7 @@
   "devDependencies": {
     "@shelf/jest-mongodb": "^1.1.5",
     "@types/bcrypt": "^3.0.0",
+    "@types/express": "^4.17.7",
     "@types/jest": "24",
     "@types/mongodb": "^3.5.25",
     "@types/node": "^14.0.13",
@@ -22,15 +23,18 @@
     "husky": "^4.2.5",
     "jest": "24",
     "lint-staged": "^10.2.11",
+    "sucrase": "^3.15.0",
     "ts-jest": "24",
     "typescript": "^3.9.5"
   },
   "dependencies": {
     "bcrypt": "^5.0.0",
+    "express": "^4.17.1",
     "mongodb": "^3.5.9",
     "validator": "^13.1.1"
   },
   "scripts": {
+    "dev": "sucrase-node src/main/server.ts",
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
     "test:verbose": "jest --passWithNoTests --runInBand",
     "test:unit": "yarn test -c jest-unit-config.js --watch",
